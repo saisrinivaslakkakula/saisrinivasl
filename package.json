@@ -1,7 +1,8 @@
 {
-  "name": "aeehpress",
+  "homepage": "http://saisrinivaslakkakula.github.io/mywebsite",
+  "name": "saisrinivasl",
   "version": "1.0.0",
-  "description": "Aeeh Press",
+  "description": "My Website",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.7"
   }
 }
