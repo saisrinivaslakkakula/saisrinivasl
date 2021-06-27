@@ -36,7 +36,7 @@ else{
 }
 app.use(notFound)
 app.use(errorHandler)
-app.listen(5000,console.log(" Server Running on port 5000"))
+app.listen(process.env.PORT,console.log(" Server Running on port 5000"))
 
 
 
