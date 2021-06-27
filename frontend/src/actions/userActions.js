@@ -17,7 +17,7 @@ export const register = (Name,email,companyName,Role,Img,testimonial) => async(d
                 'Content-Type':'application/json'
             }
         }
-        const {data} = await axios.post('/api/feedback/',{Name,email,companyName,Role,photoPath:Img,testimonial},config)
+        const {data} = await axios.post('https://saisrinivasl.herokuapp.com/api/feedback/',{Name,email,companyName,Role,photoPath:Img,testimonial},config)
         
          dispatch({
             type : ADD_TESTIMONIAL_SUCCESS,
@@ -45,7 +45,7 @@ export const getFeedbackByEmail = (email) => async(dispatch) =>{
                 'Content-Type':'application/json',
             }
         }
-        const {data} = await axios.post('/api/feedback/getFeedbackByEmail/',{email},config)
+        const {data} = await axios.post('https://saisrinivasl.herokuapp.com/api/feedback/getFeedbackByEmail/',{email},config)
         
          dispatch({
             type : GET_TESTIMONIAL_BY_EMAIL_SUCCESS,
@@ -68,7 +68,7 @@ export const getAllFeedback = () => async(dispatch) =>{
             type:GET_TESTIMONIAL_REQUEST
         })
 
-        const {data} = await axios.get('/api/feedback/getAllFeedbacks/')
+        const {data} = await axios.get('https://saisrinivasl.herokuapp.com/api/feedback/getAllFeedbacks/')
          dispatch({
             type : GET_TESTIMONIAL_SUCCESS,
             payload:data,

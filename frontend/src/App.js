@@ -30,7 +30,7 @@ const  App = () => {
       <Route path='/contact' component={ContactInfo} exact/> 
       <Route path='/404' component={Custom404} exact/> 
       <Route path='/reviewTestimonial' component={ReviewTestimonial} exact/> 
-      <Route render={() => <Redirect to={{pathname: "/404"}} />} />
+      <Route render={() => <Redirect to={{pathname: "/"}} />} />
       <Footer/>
     </Router>
 
