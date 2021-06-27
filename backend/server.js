@@ -8,6 +8,7 @@ import uploadRoutes from './routes/uploadRoutes.js'
 import {protect} from './middleware/authMiddleWare.js'
 import {notFound,errorHandler} from './middleware/errorMiddleware.js'
 import bookRoutes from './routes/bookRoutes.js'
+import feedbackRoutes from './routes/feedbackRoutes.js'
 dotenv.config()
 const app = express()
 connectDB()
@@ -18,6 +19,7 @@ app.use('/api/team',teamRoutes)
 app.use('/api/users',userRoutes)
 app.use('/api/upload',uploadRoutes)
 app.use('/api/book',bookRoutes)
+app.use('/api/feedback',feedbackRoutes)
 const __dirname = path.resolve()
 app.use('/uploads',express.static(path.join(__dirname,'/uploads')))
 app.use('/uploads/userImages',express.static(path.join(__dirname,'/uploads/userImages')))

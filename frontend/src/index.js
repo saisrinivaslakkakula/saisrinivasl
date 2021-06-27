@@ -7,6 +7,7 @@ import './public/css/bootstrap.min.css'
 import './public/css/boxicons.min.css'
 import './public/css/responsive.css'
 import './public/css/flaticon.css'
+import './public/css/devicon.min.css'
 import './public/css/style.css'
 import './public/css/slick.css'
 import './index.css';

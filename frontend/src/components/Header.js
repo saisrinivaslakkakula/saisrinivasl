@@ -1,12 +1,9 @@
 import React, {useState} from "react"
 import {Link} from 'react-router-dom'
-import {LinkContainer} from  'react-router-bootstrap'
-import * as Icon from 'react-feather'
 import { useSelector,useDispatch } from 'react-redux'
 import {logout} from '../actions/userActions'
-import {  NavDropdown} from 'react-bootstrap'
 const Header = ({history}) => {
-    //const cart = useSelector((state) => state.cart)
+
     const [menu, setMenu] = useState(true)
  
     const toggleNavbar = () => {
@@ -25,25 +22,22 @@ const Header = ({history}) => {
         window.scrollTo(0, 0); 
     })
  
-    const userLogin = useSelector(state=>state.userLogin)
+    //const userLogin = useSelector(state=>state.userLogin)
   const dispatch = useDispatch()
-  const {userInfo} = userLogin
-  const logoutHandler = ({history}) =>{
-    dispatch(logout())
-  }
+  
 
     const classOne = menu ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
     const classTwo = menu ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
 
     return (
-        <header id="header" className="headroom">
-            <div className="startp-nav">
+        <header style={{backgroundColor:'#00060f'}} id="header" className="headroom">
+            <div  className="startp-nav">
                 <div className="container">
                     <nav className="navbar navbar-expand-md navbar-light">
                     <Link onClick={toggleNavbar} className="navbar-brand" to={"/"}>
                          
                     </Link>
-                    <img src="/images/AeehPressLogo.png" alt="logo"/>
+                    
 
                         <button 
                             onClick={toggleNavbar} 
@@ -60,40 +54,43 @@ const Header = ({history}) => {
                         </button>
 
                         <div className={classOne} id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto">
+                            <ul style={{cursor:'pointer'}} className="navbar-nav ms-auto">
                                 <li className="nav-item">
                                     <Link to={"/"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
                                      Home
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/aboutus"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
+                                    <Link to={"/aboutMe"}  activeclassName="active" onClick={toggleNavbar} className="nav-link">
                                     About 
                                     </Link> 
                                 </li>
                                 <li className="nav-item" >
-                                    <Link to={"/team"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
-                                         Our Team
+                                    <Link to={"/portfolio"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
+                                         Portfolio     
+                                    </Link>
+                                </li>
+                                <li className="nav-item" >
+                                    <Link to="/Skills"  activeclassName="active" onClick={toggleNavbar} className="nav-link">
+                                         Technical Skills
                                         
                                     </Link>
                                 </li>
-
                                 <li className="nav-item">
-                                    <Link to={"/services"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
-                                            Services 
-                                    </Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link to={"/shop"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
-                                        Shop
-                                    </Link>
+                                    <Link to={"/achievements"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
+                                    Achievements
+                                    </Link> 
                                 </li>
                                 <li className="nav-item">
+                                    <Link to={"/recommendations"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
+                                            Testimonials 
+                                    </Link>
+                                </li>
+                                {/*<li className="nav-item">
                                             <Link to={"/blog"} activeclassName="active" onClick={toggleNavbar} className="nav-link">
                                                 Blog
                                             </Link>
-                                </li>
+    </li>*/}
                             
 
                                 <li className="nav-item">
@@ -103,58 +100,7 @@ const Header = ({history}) => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="others-option">
-                          {userInfo?
-                          <div>
-                          <Link to={"/cart"} className="cart-wrapper-btn">
-                               
-                               <Icon.ShoppingCart /> 
-                               <span>0</span>
-                           
-                        </Link>
-                       <Link to={"/cart"} className="cart-wrapper-btn">
-                               
-                    <NavDropdown  title={ <div style={{display: "inline-block"}}><Icon.User/> {userInfo.firstName}</div>} id='user-name'> 
-                      <LinkContainer to="#">
-                        <NavDropdown.Item>profile</NavDropdown.Item>
-                      </LinkContainer> 
-                      {userInfo.isEmployee&&(
-                          <LinkContainer to="/employeeRegistration">
-                          <NavDropdown.Item>Employee Registration</NavDropdown.Item>
-                        </LinkContainer> 
-                      )}
-
-                    
-                      {userInfo.isAuthor==="on"&&(
                         
-                          <LinkContainer to="/myBooks">
-                          <NavDropdown.Item>My Books</NavDropdown.Item>
-                        </LinkContainer> 
-                      )}
-                      
-                      <NavDropdown.Item onClick={logoutHandler}>
-                        <Link to={"/login"}>
-                          Logout
-                          </Link>
-                        </NavDropdown.Item>
-                      
-                    </NavDropdown>
-                               
-                       </Link>
-                          </div>
-                          :
-                          <div>
-                            <Link to={"../sign-up"}  className="btn btn-light">
-							    Register
-                            </Link>
-                            
-                            <Link to={"/login"} className="btn btn-primary">
-							    Login
-                            </Link>
-                          </div>
-                          }
-
-						</div>
                     </nav>
                 </div>
             </div>

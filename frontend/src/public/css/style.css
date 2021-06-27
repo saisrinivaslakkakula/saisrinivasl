@@ -88,8 +88,9 @@ This files table contents are outlined below>>>>>
 Default CSS
 =================================================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap');
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", serif !important;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -221,9 +222,9 @@ textarea.form-control {
 /* btn btn-primary */
 .btn-primary {
   color: #ffffff;
-  background-color: #44ce6f;
-  -webkit-box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
-          box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  background-color: #00060f;
+  -webkit-box-shadow: 0 13px 27px 0 rgba(57, 61, 59, 0.25);
+          box-shadow: 0 13px 27px 0 rgba(46, 53, 48, 0.25);
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -289,7 +290,7 @@ textarea.form-control {
   width: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #c679e3;
+  background: #7989e3;
   z-index: -1;
 }
 
@@ -561,7 +562,7 @@ Navbar CSS
 #header.headroom.is-sticky {
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-  background-color: #ffffff !important;
+  background-color: #00060f !important;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -585,7 +586,7 @@ Navbar CSS
 }
 
 .startp-nav {
-  background: transparent;
+  background: #00060f;
 }
 
 .startp-nav nav {
@@ -6572,8 +6573,8 @@ blockquote p, .blockquote p {
   color: #0e314c;
   line-height: 1.6;
   margin-bottom: 0;
-  font-style: italic;
-  font-weight: 500;
+  font-style: oblique;
+  font-weight: bold;
   font-size: 20px !important;
 }
 
@@ -6588,7 +6589,7 @@ blockquote::after, .blockquote::after {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #44ce6f;
+  background-color: #1f30ca;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -7082,7 +7083,7 @@ Contact CSS
   transition: .4s;
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  background: #ffffff;
+  background: #00060F;
   padding: 30px;
 }
 
@@ -7094,7 +7095,7 @@ Contact CSS
   background: #f7fafd;
   border-radius: 50%;
   font-size: 30px;
-  color: #44ce6f;
+  color: #ec0f0f;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -7102,6 +7103,11 @@ Contact CSS
 .contact-info-box h3 {
   font-size: 18px;
   margin: 25px 0 15px;
+  color: #ffffff;
+}
+
+.contact-info-box .icon a {
+  color: #ec0f0f;
 }
 
 .contact-info-box p {
@@ -7109,7 +7115,7 @@ Contact CSS
 }
 
 .contact-info-box p a {
-  color: #6084a4;
+  color: #ffffff;
 }
 
 .contact-info-box p a:hover {
@@ -7154,7 +7160,6 @@ Coming Soon CSS
   position: relative;
   z-index: 1;
   height: 100vh;
-  background-image: url(./images/coming-soon.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7512,7 +7517,7 @@ Repair Partner CSS
 }
 
 .partner-slides.owl-theme .owl-dots {
-  margin-top: 0;
+  margin-top: 30%;
 }
 
 /*================================================
@@ -8635,7 +8640,8 @@ ML Main Banner CSS
 ML Partner CSS
 =================================================*/
 .ml-partner-area.mt-minus-top {
-  margin-top: -80px;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 .single-ml-partner {
@@ -8677,6 +8683,8 @@ Our Solutions CSS
   padding-bottom: 50px;
   position: relative;
   z-index: 1;
+  background: -webkit-gradient(linear, right top, left bottom, from(#fffcff), color-stop(#fbfaff), color-stop(#343738), color-stop(#303636), to(#252c2c));
+  background: linear-gradient(to left bottom, #fce879, #f6f896, #f6fad4, #f5f4c4, #f5f4c0);
 }
 
 .single-solutions-box {
@@ -8843,24 +8851,29 @@ ML Services CSS
   padding-bottom: 50px;
   position: relative;
   z-index: 1;
-  background: -webkit-gradient(linear, right top, left bottom, from(#fffcff), color-stop(#fbfaff), color-stop(#effbff), color-stop(#e0fdff), to(#d5fefd));
-  background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd);
+  background: -webkit-gradient(linear, right top, left bottom, from(#fffcff), color-stop(#fbfaff), color-stop(#343738), color-stop(#303636), to(#252c2c));
+  background: linear-gradient(to left bottom, #6cfacb, #96f8d7, #d4faea, #c4f5e4, #c0f5e3);
+
 }
 
 .single-ml-services-box {
   position: relative;
   z-index: 1;
   background-color: #ffffff;
-  text-align: center;
+  text-align: justify;
   margin-bottom: 30px;
   padding: 30px 25px;
   overflow: hidden;
+  height:400px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .single-ml-services-box .image {
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .single-ml-services-box h3 {
@@ -8870,6 +8883,7 @@ ML Services CSS
 
 .single-ml-services-box p {
   margin-bottom: 0;
+  
 }
 
 .single-ml-services-box::before {
@@ -8909,35 +8923,35 @@ ML Feedback CSS
   margin-bottom: 45px;
   background-color: #ffffff;
   position: relative;
-  padding: 60px 70px 60px 190px;
-  border-radius: 5px;
+  padding: 5% 5% 5% 5%;
+  
 }
 
 .single-ml-feedback-item .client-info {
   position: absolute;
-  left: 60px;
-  top: 50%;
+  left: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: center;
 }
 
-.single-ml-feedback-item .client-info img {
+.single-ml-feedback-item  img {
   border-radius: 5px;
   border: 2px solid #f4f5fe;
-  width: 80px !important;
-  height: 80px !important;
-  padding: 5px;
+  width: 100px !important;
+  height: 100px !important;
+  margin-left:10%;
   display: inline-block !important;
+  object-fit: cover;
 }
 
-.single-ml-feedback-item .client-info h3 {
+.single-ml-feedback-item  h3 {
   margin-bottom: 0;
   margin-top: 10px;
   font-size: 17px;
 }
 
-.single-ml-feedback-item .client-info span {
+.single-ml-feedback-item  span {
   display: block;
   color: #c679e3;
   margin-top: 5px;
@@ -8946,6 +8960,7 @@ ML Feedback CSS
 
 .single-ml-feedback-item p {
   margin-bottom: 0;
+  font-size: large;
   color: #4a6f8a;
 }
 
@@ -8980,7 +8995,7 @@ ML Feedback CSS
 }
 
 .ml-feedback-slides {
-  max-width: 750px;
+  /*max-width: 750px;*/
   margin: -40px auto 0;
 }
 
@@ -9002,6 +9017,7 @@ ML Feedback CSS
   width: 15px;
   height: 15px;
   margin: 0 3px;
+  margin-top: 10% !important;
   background: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -9535,6 +9551,8 @@ Agency Main Banner CSS
 
 .agency-banner-image {
   text-align: right;
+  background-image: url(./images/Cover.jpg);
+  background-size: cover;
 }
 
 /*================================================
@@ -9554,14 +9572,13 @@ Our Solutions CSS
 
 .solutions-box .icon {
   color: #44ce6f;
+  font-size: 45px;
   position: relative;
   z-index: 1;
-  margin-bottom: 30px;
-  padding-left: 20px;
 }
 
 .solutions-box .icon i {
-  font-size: 45px;
+  font-size: 30px;
 }
 
 .solutions-box .icon img {
@@ -10598,3 +10615,67 @@ Go Top CSS
   margin: 0 10px;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* Miscelaneous */
+
+.cover-text-center {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  font-family: "Brush Script MT", cursive;
+  font-size: 400%;
+  color: black;
+}
+
+.cover-text-bottom {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-family: "Andale Mono", monospace;
+  font-size: 200%;
+  color: black;
+}
+.cover-text-title {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  font-family: "Andale Mono", monospace;
+  font-size: 100%;
+  color: black;
+}
+.education-snippet {
+  margin-top: 1%;
+}
+
+.education-snippet-details {
+  color: orange !important;
+  font-family: 'Bree Serif', serif;
+  margin-top: 1%;
+  text-align: center;
+  font-size: large;
+  list-style-type: none;
+}
+.achivement-heading{
+  margin-top: 5%;
+  font-size: 20px;
+  font-style: bold;
+}
+.achivement-image{
+  width: 100%;
+  background-color:#ddc;
+  border:solid 2vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  height: auto;
+}
+
+
+.devicon{
+  font-size: 800%;
+  margin: 2%;
+}
+html { scroll-behavior: smooth; } 

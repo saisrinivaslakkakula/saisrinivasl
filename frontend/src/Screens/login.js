@@ -40,7 +40,7 @@ const Login = ({location,history}) => {
                         
                         <div className="auth-head">
                             <Link to={"/it-startup"}>
-                                <a><img alt="logo" src="/images/AeehPressLogo.png" /></a>
+                                <img style={{width:"20%"}}alt="logo" src="/images/AeehPressLogo.png" />
                             </Link>
                             <p>Don't have an account yet? <Link to={"/sign-up"}>Sign Up</Link></p>
                         </div>

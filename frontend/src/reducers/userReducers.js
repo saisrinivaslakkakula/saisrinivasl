@@ -1,30 +1,16 @@
-import {USER_LOGIN_REQUEST,USER_LOGIN_SUCCESS,USER_LOGIN_FAIL,USER_LOGOUT, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_REGISTER_FAIL, USER_DETAILS_REQUEST, USER_DETAILS_SUCCESS, USER_DETAILS_FAIL} from '../constants/userConstants'
-const userLoginReducer = (state = {},action) =>{
+import { ADD_TESTIMONIAL_REQUEST, ADD_TESTIMONIAL_SUCCESS, ADD_TESTIMONIAL_FAIL, 
+    GET_TESTIMONIAL_BY_EMAIL_REQUEST, GET_TESTIMONIAL_BY_EMAIL_SUCCESS,
+     GET_TESTIMONIAL_BY_EMAIL_FAIL, GET_TESTIMONIAL_REQUEST, GET_TESTIMONIAL_SUCCESS,
+      GET_TESTIMONIAL_FAIL} from '../constants/userConstants'
+
+const addFeedbackReducer = (state = {},action) =>{
 
     switch(action.type){
-        case USER_LOGIN_REQUEST:
+        case ADD_TESTIMONIAL_REQUEST:
             return({loading:true})
-        case USER_LOGIN_SUCCESS:
-            return({loading:false,userInfo:action.payload})
-        case USER_LOGIN_FAIL:
-            return({loading:false, error:action.payload})
-        case USER_LOGOUT:
-            return({})
-            default:
-                return state
-
-    }
-
-}
-
-const userRegisterReducer = (state = {},action) =>{
-
-    switch(action.type){
-        case USER_REGISTER_REQUEST:
-            return({loading:true})
-        case USER_REGISTER_SUCCESS:
-            return({loading:false,userInfo:action.payload})
-        case USER_REGISTER_FAIL:
+        case ADD_TESTIMONIAL_SUCCESS:
+            return({loading:false,feedback:action.payload})
+        case ADD_TESTIMONIAL_FAIL:
             return({loading:false, error:action.payload})
         default:
                 return state
@@ -33,14 +19,14 @@ const userRegisterReducer = (state = {},action) =>{
 
 }
 
-const userDetailsReducer = (state = {user:{}},action) =>{
+const getFeedbackByEmail = (state = {feedback:{}},action) =>{
 
     switch(action.type){
-        case USER_DETAILS_REQUEST:
-            return({...state,loading:true})
-        case USER_DETAILS_SUCCESS:
-            return({loading:false,user:action.payload})
-        case USER_DETAILS_FAIL:
+        case GET_TESTIMONIAL_BY_EMAIL_REQUEST:
+            return({loading:true})
+        case GET_TESTIMONIAL_BY_EMAIL_SUCCESS:
+            return({loading:false,feedback:action.payload})
+        case GET_TESTIMONIAL_BY_EMAIL_FAIL:
             return({loading:false, error:action.payload})
         default:
                 return state
@@ -49,4 +35,22 @@ const userDetailsReducer = (state = {user:{}},action) =>{
 
 }
 
-export {userLoginReducer,userRegisterReducer,userDetailsReducer}
+const getAllFeedbacks = (state = {feedback:{}},action) =>{
+
+    switch(action.type){
+        case GET_TESTIMONIAL_REQUEST:
+            return({loading:true})
+        case GET_TESTIMONIAL_SUCCESS:
+            return({loading:false,feedback:action.payload})
+        case GET_TESTIMONIAL_FAIL:
+            return({loading:false, error:action.payload})
+        default:
+                return state
+
+    }
+
+}
+
+
+
+export {getAllFeedbacks,addFeedbackReducer,getFeedbackByEmail}

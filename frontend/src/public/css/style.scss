@@ -93,7 +93,7 @@ Default CSS
 $font-family: 'Poppins', sans-serif;
 $light-green-color: #44ce6f;
 $white-color: #ffffff;
-$black-color: #0e314c;
+$black-color: #051725;
 $navlink-color: #4a6f8a;
 $paragraph-color: #6084a4;
 $purple-color: #c679e3;
@@ -492,20 +492,20 @@ Navbar CSS
         z-index: 9999;
         top: 0;
         left: 0;
-        background-color: transparent;
+        background-color: #00060f !important;
         transition: .3s;
         padding-top: 15px;
        
         &.is-sticky {
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-            background-color: $white-color !important;
+            background-color: #00060f;
             padding: {
                 top: 15px;
                 bottom: 15px;
             };
         }
         &.navbar-style-two {
-            background-color: $white-color;
+            background-color: #00060f;
             padding: {
                 top: 15px;
                 bottom: 15px;
@@ -522,7 +522,7 @@ Navbar CSS
     }
 }
 .startp-nav {
-    background: transparent;
+    background: #00060f !important;
 
     nav {
         padding: 0;
@@ -7140,7 +7140,7 @@ Repair Partner CSS
 .partner-slides {
     &.owl-theme {
         .owl-dots {
-            margin-top: 0;
+            margin-top: 10%;
         }
     }
 }
@@ -9006,6 +9006,11 @@ Agency Main Banner CSS
 }
 .agency-banner-image {
     text-align: right;
+    background-image: url(/images/Cover.jpg) !important;
+}
+
+.agency-banner-image-bg {
+    background-image: url(/images/Cover.jpg) !important;
 }
 
 /*================================================
@@ -10023,3 +10028,11 @@ Go Top CSS
         }
     }
 }
+
+/* Miscellaneous */
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }

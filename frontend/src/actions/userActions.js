@@ -1,82 +1,54 @@
-import {USER_LOGIN_REQUEST,USER_LOGIN_SUCCESS,USER_LOGIN_FAIL, USER_LOGOUT, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_REGISTER_FAIL, USER_DETAILS_REQUEST, USER_DETAILS_SUCCESS, USER_DETAILS_FAIL} from '../constants/userConstants'
+import {
+     ADD_TESTIMONIAL_REQUEST, ADD_TESTIMONIAL_SUCCESS, 
+    ADD_TESTIMONIAL_FAIL, GET_TESTIMONIAL_BY_EMAIL_REQUEST, 
+     GET_TESTIMONIAL_BY_EMAIL_SUCCESS, GET_TESTIMONIAL_REQUEST, GET_TESTIMONIAL_SUCCESS, 
+     GET_TESTIMONIAL_FAIL,
+     GET_TESTIMONIAL_BY_EMAIL_FAIL} from '../constants/userConstants'
 import axios from 'axios'
-export const login = (email,password) => async(dispatch) =>{
+
+
+export const register = (Name,email,companyName,Role,Img,testimonial) => async(dispatch) =>{
     try {
         dispatch({
-            type:USER_LOGIN_REQUEST
+            type:ADD_TESTIMONIAL_REQUEST
         })
         const config = {
             headers: {
                 'Content-Type':'application/json'
             }
         }
-        //console.log(config)
-        const {data} = await axios.post('/api/users/login',{email,password},config)
+        const {data} = await axios.post('/api/feedback/',{Name,email,companyName,Role,photoPath:Img,testimonial},config)
         
          dispatch({
-            type : USER_LOGIN_SUCCESS,
+            type : ADD_TESTIMONIAL_SUCCESS,
             payload:data,
         })
-        localStorage.setItem('userInfo',JSON.stringify(data)) 
+ 
         
     } catch (error) {
-
+        
          dispatch({
-            type:USER_LOGIN_FAIL,
+            type:ADD_TESTIMONIAL_FAIL,
             payload:error.response && error.response.data.message ? error.response.data.message: error.message
         }) 
     }
 }
 
-export const register = (firstName,lastName,email,password,photoPath,isAuthor) => async(dispatch) =>{
+export const getFeedbackByEmail = (email) => async(dispatch) =>{
     try {
         dispatch({
-            type:USER_REGISTER_REQUEST
-        })
-        const config = {
-            headers: {
-                'Content-Type':'application/json'
-            }
-        }
-        //console.log(config)
-        const {data} = await axios.post('/api/users/',{firstName,lastName,email,password,photoPath,isAuthor},config)
-        
-         dispatch({
-            type : USER_REGISTER_SUCCESS,
-            payload:data,
-        })
-        dispatch({
-            type : USER_LOGIN_SUCCESS,
-            payload:data,
-        })
-        localStorage.setItem('userInfo',JSON.stringify(data)) 
-        
-    } catch (error) {
-
-         dispatch({
-            type:USER_REGISTER_FAIL,
-            payload:error.response && error.response.data.message ? error.response.data.message: error.message
-        }) 
-    }
-}
-
-export const getUserDetails = (id) => async(dispatch,getState) =>{
-    try {
-        dispatch({
-            type:USER_DETAILS_REQUEST
+            type:GET_TESTIMONIAL_BY_EMAIL_REQUEST
         })
      
-        const {userLogin} = getState()
-        const {userInfo} = userLogin
         const config = {
             headers: {
                 'Content-Type':'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
             }
         }
-        const {data} = await axios.get(`/api/users/${id}`,config)
+        const {data} = await axios.post('/api/feedback/getFeedbackByEmail/',{email},config)
+        
          dispatch({
-            type : USER_DETAILS_SUCCESS,
+            type : GET_TESTIMONIAL_BY_EMAIL_SUCCESS,
             payload:data,
         })
        
@@ -84,15 +56,32 @@ export const getUserDetails = (id) => async(dispatch,getState) =>{
     } catch (error) {
 
          dispatch({
-            type:USER_DETAILS_FAIL,
+            type:GET_TESTIMONIAL_BY_EMAIL_FAIL,
             payload:error.response && error.response.data.message ? error.response.data.message: error.message
         }) 
     }
 }
 
-export const logout = () =>(dispatch)=>{
-    localStorage.removeItem('userInfo')
-    dispatch({
-        type:USER_LOGOUT
-    })
+export const getAllFeedback = () => async(dispatch) =>{
+    try {
+        dispatch({
+            type:GET_TESTIMONIAL_REQUEST
+        })
+
+        const {data} = await axios.get('/api/feedback/getAllFeedbacks/')
+         dispatch({
+            type : GET_TESTIMONIAL_SUCCESS,
+            payload:data,
+        })
+       
+        
+    } catch (error) {
+
+         dispatch({
+            type:GET_TESTIMONIAL_FAIL,
+            payload:error.response && error.response.data.message ? error.response.data.message: error.message
+        }) 
+    }
 }
+
+

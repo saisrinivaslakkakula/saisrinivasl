@@ -204,7 +204,7 @@ const EmployeeRegistration = ({ history }) => {
                     <div className="auth-form">
                         <div className="auth-head">
                             <Link to={"/"}>
-                                <img src="/images/AeehPressLogo.png" />
+                            <img style={{width:"20%"}}alt="logo" src="/images/AeehPressLogo.png" />
                             </Link>
                             <p>Employee Registration Form</p>
                         </div>
@@ -286,7 +286,7 @@ const EmployeeRegistration = ({ history }) => {
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">About Yourself</label>
-                                <TextareaCounter required onChange={setAbout} countLimit={400} id="about" />
+                                <TextareaCounter required onChange={setAbout} countLimit={1000} id="about" />
                             </div>
                             {error && <Message variant='danger'>{error}</Message>}
                             {errorMessage && <Message variant='danger'>{errorMessage}</Message>}

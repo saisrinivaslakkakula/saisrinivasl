@@ -1,40 +1,36 @@
 import React from "react"
-import './App.css';
 import Header from './components/Header'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import Footer from './components/Footer'
 import HomeScreen from './Screens/HomeScreen'
-import TeamScreen from './Screens/TeamScreen'
-import AboutUsScreen from './Screens/aboutus'
-import Services from './Screens/services'
-import Blog from './Screens/blog'
-import Login from './Screens/login'
+import About from './Screens/About'
+import Projects from './Screens/Projects'
+import Skills from './Screens/Skills'
+import Achievements from './Screens/Achievements'
+import Feedback from './Screens/Feedback'
+import ContactInfo from './Screens/ContactInfo'
 import SignUp from './Screens/signup'
-import EmployeeRegistration from './Screens/employeeRegistration'
-import BookDetail from './Screens/BookDetail'
-import MyBooks from './Screens/myBooks'
-import addNewBook from './Screens/addNewBook'
-import Contact from './Screens/contact'
-import ErrorScreen from './Screens/ErrorScreen'
-import TermsConditions from './Screens/TermsConditions'
+import TestCrop from './Screens/TestCrop'
+import ReviewTestimonial from './Screens/reviewTestimonial'
+import Custom404 from './Screens/404'
+import ComingSoon from './Screens/coming-soon'
 const  App = () => {
   return (
     <Router>
       <Header/>
-      <Route path='/' component={HomeScreen} exact/>
-      <Route path='/team' component={TeamScreen} exact/>
-      <Route path='/aboutus' component={AboutUsScreen} exact/>
-      <Route path='/services' component={ErrorScreen} exact/>
-      <Route path='/blog' component={Blog} exact/>
-      <Route path='/bookDetail' component={BookDetail} exact/>
-      <Route path='/login' component={Login} exact/>
-      <Route path='/sign-up' component={SignUp} exact/>
-      <Route path='/employeeRegistration' component={EmployeeRegistration} exact/>
-      <Route path='/myBooks' component={MyBooks} exact/>
-      <Route path='/addNewBook' component={addNewBook} exact/>
-      <Route path='/contact' component={Contact} exact/>
-      <Route path='/error' component={ErrorScreen} exact/>
-      <Route path='/terms' component={TermsConditions} exact/>
+      <Route path='/' component={HomeScreen} exact/> 
+      <Route path='/aboutMe' component={About} exact/> 
+      <Route path='/portfolio' component={Projects} exact/> 
+      <Route path='/Skills' component={Skills} exact/> 
+      <Route path='/achievements' component={Achievements} exact/> 
+      <Route path='/projectDetails' component={ComingSoon} exact/> 
+      <Route path='/blog' component={ComingSoon} exact/> 
+      <Route path='/recommendations' component={Feedback} exact/> 
+      <Route path='/contact' component={ContactInfo} exact/> 
+      <Route path='/404' component={Custom404} exact/> 
+      <Route path='/reviewTestimonial' component={ReviewTestimonial} exact/> 
+      <Route render={() => <Redirect to={{pathname: "/404"}} />} />
       <Footer/>
     </Router>
 
