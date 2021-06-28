@@ -99,7 +99,7 @@ const Recommend = ({ location, history }) => {
             }
             setUploading(true)
             formData.append('user', photoFile, photoFile.name)
-            const { data } = await axios.post('https://saisrinivasl.herokuapp.com/api/upload/userimages', formData, config)
+            const { data } = await axios.post('/api/upload/userimages', formData, config)
             setUploading(false)
             return (data)
             
