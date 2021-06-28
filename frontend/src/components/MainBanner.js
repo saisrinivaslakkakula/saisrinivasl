@@ -13,7 +13,7 @@ const MainBanner = () => {
                     <div className="col-md-6">
                         <div className="cover-text-center">
                         <Fade right>
-                        <p>The world is always a good place to live. All we're trying to do is to make it better</p>
+                        <h2>The world is always a good place to live. All we're trying to do is to make it better</h2>
                         <h4>Sai Srinivas Lakkakula</h4>
                         <h6>Software Engineer | Full-Stack Web Developer | AI/ML Enthusiast  </h6>
                         </Fade>

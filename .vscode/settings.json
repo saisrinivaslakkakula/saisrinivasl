@@ -1,4 +1,3 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/5f00efd3-cd7b-402a-acdc-b27c2edbe4bd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/saisrinivasl",
     "appService.deploySubpath": "."
 }
