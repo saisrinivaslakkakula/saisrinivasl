@@ -9491,6 +9491,7 @@ Agency Main Banner CSS
 .agency-main-banner {
   position: relative;
   z-index: 1;
+  height: 300px;
 }
 
 .agency-main-banner .container-fluid {
@@ -9518,6 +9519,10 @@ Agency Main Banner CSS
 
 .agency-main-banner .shape4 {
   right: 50%;
+}
+
+.agency-main-banner img {
+ height:370px
 }
 
 .agency-banner-content {
@@ -10619,26 +10624,36 @@ Go Top CSS
 /* Miscelaneous */
 
 .cover-text-center {
-  position: absolute;
-  top: 8%;
-  left: 10%;
+  position: relative;
+  /*top: 8vh;
+  left: 10vh;*/
   font-family: "Brush Script MT", cursive;
-  font-size: 400%;
+  font-size: 3vw;
+  color: black;
+}
+
+.cover-text-center h4 {
+  margin-top: 5vw;
+  font-family: "Andale Mono", monospace;
+  color: black;
+}
+.cover-text-center h6 {
+  font-family: "Andale Mono", monospace;
   color: black;
 }
 
 .cover-text-bottom {
   position: absolute;
-  top: 50%;
-  left: 5%;
+  /*top: 50vh;
+  left: 5vh;*/
   font-family: "Andale Mono", monospace;
   font-size: 200%;
   color: black;
 }
 .cover-text-title {
   position: absolute;
-  top: 60%;
-  left: 5%;
+  /*top: 60vh;
+  left: 5vh;*/
   font-family: "Andale Mono", monospace;
   font-size: 100%;
   color: black;

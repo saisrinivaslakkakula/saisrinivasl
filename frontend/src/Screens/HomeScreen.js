@@ -5,11 +5,7 @@ import MainBanner from '../components/MainBanner'
 const HomeScreen = () => {
     return (
         <div>
-           
              <MainBanner/>
-             
-
-  
         </div>
     )
 }
