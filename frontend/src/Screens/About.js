@@ -24,13 +24,11 @@ const About = () => {
                             <Col >
                                 <div className="article-content">
                                     <blockquote>
-                                        <p>I am a Graduate student pursuing my Master’s in Computer Engineering. I am persistent, dedicated, and needless to say a tech enthusiast. I have a prior work experience of 3+ years in a service-based IT company called Capgemini. My work included building end-to-end web applications that especially involve application modernization and digital transformation of Legacy systems.
+                                        <p>As a Graduate student in Computer Engineering at San Jose State University, I am driven by my passion for technology and my dedication to my studies. With 3+ years of work experience at Capgemini, a service-based IT company, and an internship at Cisco Systems as a Software Engineer, I have gained valuable skills in building end-to-end web applications and developing micro-services. In fact, I was a key member of the development team for the "NamasteCapgemini" application, which was nominated for the Aegis Grahambell awards in the COVID combat innovation category in 2020.
 
-I was an integral part of the development team of the "NamasteCapgemini" application which got nominated to Aegis Grahambell awards in the COVID combat innovation category in the year 2020.
+In addition to my technical expertise, I am also a natural teacher and enjoy sharing my knowledge with others. I have conducted training and workshops at various levels within my organization and am always looking for new opportunities to learn and grow.
 
-I love to learn and teach new things. I have had experience in conducting training and workshops at different levels within the organization. Apart from being a techie, I love doing standup comedy and watching movies.
-
-I am open to opportunities in the field of web/native application development, AI/ML, and cloud computing.</p>
+Outside of work and school, I have a love for standup comedy and movies. I am open to exploring opportunities in the fields of web/native application development, AI/ML, and cloud computing.</p>
                                     </blockquote>
                                     
                                 </div>
