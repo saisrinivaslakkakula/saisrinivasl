@@ -110,10 +110,10 @@
   "deploy": "npm run build && gh-pages -d build",
   
     
-  "start": "react-scripts start",
+  "start": "react-scripts --openssl-legacy-provider start",
   
     
-  "build": "react-scripts build",
+  "build": "react-scripts --openssl-legacy-provider build",
   
     
   "test": "react-scripts test",
