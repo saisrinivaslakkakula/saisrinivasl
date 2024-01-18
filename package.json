@@ -10,7 +10,7 @@
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    "build": "CI=false npm install && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Sai Srinivas Lakkakula",
   "license": "ISC",
